@@ -4,35 +4,21 @@
 [![rank](https://make.fun/badge/ai-excited-01/Dev-MiMi/-makefun-ai-excited-01/rank.svg)](https://make.fun/bounty/ai-excited-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=ai-excited-01)
 [![reward](https://make.fun/badge/ai-excited-01/Dev-MiMi/-makefun-ai-excited-01/reward.svg)](https://make.fun/bounty/ai-excited-01?utm_source=github&utm_medium=readme&utm_campaign=ai-excited-01)
 
-**Unzip the Storm** captures a red-coated figure pulling open a storm-sky zipper to reveal a golden sun. A Node 22 program verifies the committed artwork and copies its exact bytes to the required image output.
+**Unzip the Storm** — a flying red-coated figure pulls open a giant storm-sky zipper to reveal a golden sun.
+
+The user supplied the original artwork. Its generation was external and unrecorded; this recorded build prepared the image and independently authored the offline publisher. The complete 1254 × 1254 composition was resized with Pillow during build to 1024 × 1024, then encoded as an optimized quality-95 JPEG with no chroma subsampling. A fresh RGB pixel buffer removed source metadata. No image API was used in this build.
+
+Python 3.13 uses only the standard library at runtime. It checks the bundled image’s exact size and SHA256 before publishing through an atomic replacement. The output is JPEG data named `entry.png`, as the bounty permits. The prepared asset is 656,829 bytes, below the 1 MiB limit.
+
+![Unzip the Storm](assets/unzip-the-storm.jpg)
 
 ## Run it
 
 ```sh
-MAKEFUN_OUTPUT_DIR=out node main.ts
+MAKEFUN_OUTPUT_DIR=out python3.13 main.py
 ```
 
-Use a Node 22 distribution with native TypeScript support. For a Node build without it, the source also runs as a standard ES module from the repository root:
-
-```sh
-MAKEFUN_OUTPUT_DIR=out node --input-type=module < main.ts
-```
-
-The default destination is `/output/entry.png`. The file contains JPEG bytes, which the bounty accepts with this filename. Runtime uses only Node's standard library, without installation or network access. The program checks the artwork's SHA256 and size, verifies its copy, and renames a temporary file to publish a complete image.
-
-## Artwork provenance
-
-The user supplied `AI.png`, an image they generated outside the recorded build. Its generation session, tool and prompt were not provided or recorded. This is an input artwork asset, not transcript-authored code.
-
-The original is 1254 × 1254 pixels and 2,896,862 bytes and was left intact. During the recorded build, Pillow resized the complete composition with Lanczos to 1024 × 1024, encoded an optimized JPEG at quality 98 with no chroma subsampling, and removed metadata. The committed asset, `assets/unzip-the-storm.jpg`, is 974,391 bytes. Full-size and 300-pixel views were inspected, and the asset completely decoded before packaging. No image-generation API was called during this build.
-
-SHA256: `5bab9a3e253e4bdd6b56370927a13d4a3e7bca1862f2ec42a8a48a2b864843ad`.
-
-The initial copier was authored in an earlier, interrupted recorded build session. The continuation retained its asset path, output selection and directory creation, then added integrity checks and atomic output publication. The earlier setup conversation authored no entry code. Private recording files are maintained outside this repository.
-
-## License
-
-MIT; see [LICENSE](LICENSE).
+The make.fun link below is @dev-mimi’s referral link.
 
 ---
 
