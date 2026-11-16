@@ -30,6 +30,7 @@ def main() -> None:
             handle.write(artwork)
             handle.flush()
             os.fsync(handle.fileno())
+        temporary.chmod(0o644)
         os.replace(temporary, destination)
     finally:
         if temporary is not None:
