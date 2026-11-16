@@ -4,21 +4,15 @@
 [![rank](https://make.fun/badge/ai-excited-01/Dev-MiMi/-makefun-ai-excited-01/rank.svg)](https://make.fun/bounty/ai-excited-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=ai-excited-01)
 [![reward](https://make.fun/badge/ai-excited-01/Dev-MiMi/-makefun-ai-excited-01/reward.svg)](https://make.fun/bounty/ai-excited-01?utm_source=github&utm_medium=readme&utm_campaign=ai-excited-01)
 
-**Unzip the Storm** — a flying red-coated figure pulls open a giant storm-sky zipper to reveal a golden sun.
+**Dawn Breaks Free** — a fiery phoenix bursts through a zippered storm sky. The Python 3.13 program verifies the committed artwork and atomically publishes its identical JPEG bytes as `entry.png`. Runtime is offline and uses only the standard library.
 
-The user supplied the original artwork. Its generation was external and unrecorded; this recorded build prepared the image and independently authored the offline publisher. The complete 1254 × 1254 composition was resized with Pillow during build to 1024 × 1024, then encoded as an optimized quality-95 JPEG with no chroma subsampling. A fresh RGB pixel buffer removed source metadata. No image API was used in this build.
-
-Python 3.13 uses only the standard library at runtime. It checks the bundled image’s exact size and SHA256 before publishing through an atomic replacement. The output is JPEG data named `entry.png`, as the bounty permits. The prepared asset is 656,829 bytes, below the 1 MiB limit.
-
-![Unzip the Storm](assets/unzip-the-storm.jpg)
+Artwork provenance: the supplied square image was generated externally in the user’s image-generation client before this recorded code build; its generation was not recorded here. This build decoded the complete image with local Pillow, resized the full framing to 1024×1024 without cropping, removed metadata using fresh RGB pixels, and encoded an optimized quality-97 JPEG with no chroma subsampling. JPEG content is accepted under the required `entry.png` filename.
 
 ## Run it
 
 ```sh
-MAKEFUN_OUTPUT_DIR=out python3.13 main.py
+MAKEFUN_OUTPUT_DIR=/output python3 main.py
 ```
-
-The make.fun link below is @dev-mimi’s referral link.
 
 ---
 
